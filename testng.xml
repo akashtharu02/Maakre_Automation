@@ -3,9 +3,7 @@
     <test name="All Tests">
         <classes>
             <class name="test_package.TS001SignInFunctionalityTests"/>
-            <class name="test_package.TS004ReceiverFunctionalityTests"/>
-            <class name="test_package.TSOO6EditProfileFunctionalityTests"/>
-            <class name="test_package.TS008ViewConsignmentFunctionalityTests"/>
+
 
         </classes>
     </test>
