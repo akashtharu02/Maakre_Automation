@@ -1,0 +1,54 @@
+package test_package;
+import base_package.Base;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages_package.ConsignmentFormPage;
+import pages_package.DashboardPage;
+import pages_package.Toast_URL_Page;
+import pages_package.ViewConsignmetsPage;
+
+
+public class TS008ViewConsignmentFunctionalityTests extends Base {
+//TS008ViewConsignmentFunctionality
+    @Test(priority = 1)
+    public void TS008_TC003_Create_Consignment_Successfully_with_Valid_Info() throws InterruptedException {
+
+        DashboardPage dashboard = new DashboardPage(driver);
+        ViewConsignmetsPage consignmentListing = new ViewConsignmetsPage(driver);
+        ConsignmentFormPage consignmentForm = new ConsignmentFormPage(driver);
+        Toast_URL_Page popup = new Toast_URL_Page(driver);
+
+        TS001SignInFunctionalityTests.TS001_TC002_Valid_Email_and_Password_with_Password_Masked();
+        dashboard.clickConsignmentsDropdown();
+        dashboard.clickViewConsignments();
+        consignmentListing.clickCreateNew();
+        consignmentForm.selectReceiver("Claude Tech, Marco");
+        consignmentForm.selectDeliveryAddress("Gausala Chowk, Gausala, Kathmandu,");
+        consignmentForm.clickCheckbox();
+        consignmentForm.selectAuthorityType("Front");
+//      consignmentForm.selectDropdownOption(authorityTypeDropdown,"Front");
+        consignmentForm.selectServiceType("Urgent");
+
+        consignmentForm.selectPickupAddress("82 Cherry Grove, West Hobart, Scotchtown, Tasmania");
+        consignmentForm.enterSpecialInstruction("Drive Slowly");
+
+        consignmentForm.selectDate("20", "May", "2026");
+
+        consignmentForm.selectPackageCode("PLT");
+//        consignmentForm.clickPackageAddPackage();
+        consignmentForm.enterPackageDescription("description of Package");
+        consignmentForm.enterPackageLength("50");
+        consignmentForm.enterPackageWidth("40");
+        consignmentForm.enterPackageHeight("30");
+        consignmentForm.enterPackageWeight("20");
+        consignmentForm.clickCreatePackageBtn();
+
+        String actualMessage = popup.getSuccessMessage();
+        Assert.assertEquals(
+                actualMessage,
+                "Consignment created successfully",
+                "Unable to create consignment"
+        );
+
+    }
+}
