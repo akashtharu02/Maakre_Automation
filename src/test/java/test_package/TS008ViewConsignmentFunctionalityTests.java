@@ -32,7 +32,7 @@ public class TS008ViewConsignmentFunctionalityTests extends Base {
         consignmentForm.selectPickupAddress("82 Cherry Grove, West Hobart, Scotchtown, Tasmania");
         consignmentForm.enterSpecialInstruction("Drive Slowly");
 
-        consignmentForm.selectDate("20", "May", "2026");
+        consignmentForm.selectDate("25", "June", "2026");
 
         consignmentForm.selectPackageCode("PLT");
 //        consignmentForm.clickPackageAddPackage();

@@ -37,8 +37,8 @@ public class ConsignmentFormPage {
 
     private final By dateInput = By.xpath("//span[text()=\"Pick a date\"]");
     private final By monthYearLabel = By.xpath("//span[@class=\"select-none font-medium text-sm rdp-caption_label\"]");
-    private final By prevButton = By.xpath("//*[@id=\"radix-_r_9_\"]/div/div/nav/button[1]");
-    private final By nextButton = By.xpath("//*[@id=\"radix-_r_9_\"]/div/div/nav/button[2]");
+    private final By prevButton = By.xpath("//nav/button[1]");
+    private final By nextButton = By.xpath("//nav/button[2]");
 
 
     public void clickCheckbox(){

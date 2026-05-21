@@ -20,7 +20,7 @@ public class DashboardPage {
    private final By settingsTab = By.xpath("//span[text()='Settings']");
    private final By consignmentsDropdown = By.xpath("//span[text()=\"Consignments\"]");
    private final By viewConsignmentsTab = By.xpath("//a[text()=\"View Consignments\"]");
-   private final By logoutTab = By.xpath("//div[@class=\"flex items-center px-[10px] text-gray-500 hover:bg-gray-100 rounded-[6px] cursor-pointer w-full py-[6px] text-sm \"]");
+    private final By logoutTab = By.xpath("//nav/ul/div/span");
 
 
     public void clickReceiver(){
