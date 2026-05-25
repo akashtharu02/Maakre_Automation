@@ -19,9 +19,9 @@ public class ReceiversListingPage {
     }
 
     private final By addReceiverBtn    = By.xpath("//span[text()='Add Receiver']");
-    private final By editIconButton    = By.xpath("//div/a[@href=\"/receiver/42\"]");
+    private final By editIconButton    = By.xpath("//div/a[@href=\"/receiver/22\"]");
     private final By searchReceiverField = By.xpath("/html/body/div[3]/div[3]/section/div[2]/div/input");
-    private final By tableRows         = By.xpath("//tbody/tr");  // ← changed to <tr> not <td>
+    private final By tableRows         = By.xpath("//tbody/tr");
 
     public void clickAddReceiverBtn() {
         wait.until(ExpectedConditions.elementToBeClickable(addReceiverBtn)).click();
