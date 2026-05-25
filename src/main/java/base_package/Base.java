@@ -73,6 +73,9 @@ public class Base {
                 edgeOptions.addArguments("--disable-dev-shm-usage");
                 edgeOptions.addArguments("--disable-gpu");
                 edgeOptions.addArguments("--window-size=1920,1080");
+                edgeOptions.addArguments("--user-data-dir=C:\\Windows\\Temp\\edge-jenkins-profile");
+                edgeOptions.addArguments("--disable-extensions");
+                edgeOptions.addArguments("--disable-software-rasterizer");
                 edgeOptions.setBinary("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe");
                 return new EdgeDriver(edgeOptions);
 
