@@ -45,39 +45,37 @@ public class Base {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
     }
 
-    private WebDriver createDriver(String browser) {
-        switch (browser.toLowerCase()) {
+   private WebDriver createDriver(String browser) {
+    switch (browser.toLowerCase()) {
 
-            case "chrome":
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--no-sandbox");
-                chromeOptions.addArguments("--disable-dev-shm-usage");
-                chromeOptions.addArguments("--disable-gpu");
-                chromeOptions.addArguments("--remote-allow-origins=*");
-                return new ChromeDriver(chromeOptions);
+        case "chrome":
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--disable-dev-shm-usage");
+            chromeOptions.addArguments("--disable-gpu");
+            chromeOptions.addArguments("--remote-allow-origins=*");
+            return new ChromeDriver(chromeOptions);
 
-            case "firefox":
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.addArguments("--headless");
-                firefoxOptions.addArguments("--no-sandbox");
-                firefoxOptions.addArguments("--disable-dev-shm-usage");
-                firefoxOptions.addArguments("--width=1920");
-                firefoxOptions.addArguments("--height=1080");
-                return new FirefoxDriver(firefoxOptions);
+        case "firefox":
+            FirefoxOptions firefoxOptions = new FirefoxOptions();
+            firefoxOptions.addArguments("--headless");
+            firefoxOptions.addArguments("--width=1920");
+            firefoxOptions.addArguments("--height=1080");
+            return new FirefoxDriver(firefoxOptions);
 
-            case "edge":
-                EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.addArguments("--headless");
-                edgeOptions.addArguments("--no-sandbox");
-                edgeOptions.addArguments("--disable-dev-shm-usage");
-                edgeOptions.addArguments("--disable-gpu");
-                edgeOptions.addArguments("--remote-allow-origins=*");
-                return new EdgeDriver(edgeOptions);
+        case "edge":
+            EdgeOptions edgeOptions = new EdgeOptions();
+            edgeOptions.addArguments("--headless");
+            edgeOptions.addArguments("--no-sandbox");
+            edgeOptions.addArguments("--disable-dev-shm-usage");
+            edgeOptions.addArguments("--disable-gpu");
+            edgeOptions.addArguments("--window-size=1920,1080");
+            return new EdgeDriver(edgeOptions);
 
-            default:
-                throw new IllegalArgumentException("Unsupported browser: " + browser);
-        }
+        default:
+            throw new IllegalArgumentException("Unsupported browser: " + browser);
     }
+}
 
     @AfterMethod
     public void tearDown() {

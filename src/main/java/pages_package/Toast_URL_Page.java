@@ -18,7 +18,7 @@ public class Toast_URL_Page {
     }
 
 
-    private final By successMessage = By.xpath("//div[@role=\"status\"]");
+    private final By successMessage = By.xpath("//div[@role=\"status\"] |//div[2]/div/div/div[2]");
 
 
     //Toast Message Method

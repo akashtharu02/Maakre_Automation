@@ -14,6 +14,9 @@ import java.util.List;
 
 public class TS004ReceiverFunctionalityTests extends Base {
 
+    private static final String timestamp = String.valueOf(System.currentTimeMillis());
+    private static final String emailAndReff = timestamp.substring(timestamp.length() - 4);
+    private static final String phone  = timestamp.substring(timestamp.length() - 8);
 
     @BeforeMethod
     public void preprocess()  {
@@ -38,9 +41,9 @@ public class TS004ReceiverFunctionalityTests extends Base {
         addReceiver.enterSuburb("Chabhil");
         addReceiver.enterPostCod("2010");
         addReceiver.enterStreetAddress("KL Tour");
-        addReceiver.enterEmail("jvhwertewth@gmail.com");
-        addReceiver.enterReferenceNumber("rrer");
-        addReceiver.enterPhoneNumber("+61-986551157");
+        addReceiver.enterEmail("testa" +emailAndReff+"@gmail.com");
+        addReceiver.enterReferenceNumber("TSTA"+emailAndReff);
+        addReceiver.enterPhoneNumber("+61-1"+phone);
         addReceiver.clickSubmitBtn();
 
 
@@ -67,9 +70,9 @@ public class TS004ReceiverFunctionalityTests extends Base {
         addReceiver.enterSuburb("Chabhil");
         addReceiver.enterPostCod("2010");
         addReceiver.enterStreetAddress("KL Tour");
-        addReceiver.enterEmail("edwddwrl@gmail.com");
-        addReceiver.enterReferenceNumber("ppp");
-        addReceiver.enterPhoneNumber("+61-981627345");
+        addReceiver.enterEmail("testb" +emailAndReff+"@gmail.com");
+        addReceiver.enterReferenceNumber("TSTB"+emailAndReff);
+        addReceiver.enterPhoneNumber("+61-2"+phone);
         addReceiver.clickSubmitBtn();
 
         Assert.assertEquals(
@@ -96,9 +99,9 @@ public class TS004ReceiverFunctionalityTests extends Base {
         updateReceiver.enterSuburb("Chabhil");
         updateReceiver.enterPostCod("2010");
         updateReceiver.enterStreetAddress("KL Tour");
-        updateReceiver.enterEmail("jatecsdhh@gmail.com");
-        updateReceiver.enterReferenceNumber("Jt");
-        updateReceiver.enterPhoneNumber("+61-983385779");
+        updateReceiver.enterEmail("testa" +emailAndReff+"@gmail.com");
+        updateReceiver.enterReferenceNumber("TSTA"+emailAndReff);
+        updateReceiver.enterPhoneNumber("+61-1"+phone);
         updateReceiver.clickSubmitBtn();
 
 
@@ -124,9 +127,9 @@ public class TS004ReceiverFunctionalityTests extends Base {
         updateReceiver.enterSuburb("Chabhil");
         updateReceiver.enterPostCod("2010");
         updateReceiver.enterStreetAddress("KL Tour");
-        updateReceiver.enterEmail("jatecsdhh@gmail.com");
-        updateReceiver.enterReferenceNumber("Jt");
-        updateReceiver.enterPhoneNumber("+61-983385779");
+        updateReceiver.enterEmail("testb" +emailAndReff+"@gmail.com");
+        updateReceiver.enterReferenceNumber("TSTB"+emailAndReff);
+        updateReceiver.enterPhoneNumber("+61-2"+phone);
         updateReceiver.clickSubmitBtn();
         updateReceiver.clickSubmitBtn();
 
