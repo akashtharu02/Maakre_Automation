@@ -50,6 +50,7 @@ public class Base {
 
         case "chrome":
             ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--no-sandbox");
             chromeOptions.addArguments("--disable-dev-shm-usage");
             chromeOptions.addArguments("--disable-gpu");
