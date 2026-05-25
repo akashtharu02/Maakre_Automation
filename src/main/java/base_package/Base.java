@@ -83,6 +83,9 @@ public class Base {
                 edgeOptions.setBinary("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe");
                 return new EdgeDriver(edgeOptions);
 
+
+
+
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
