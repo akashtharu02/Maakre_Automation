@@ -50,7 +50,7 @@ public class Base {
 
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
-//                chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("--headless");
                 chromeOptions.addArguments("--no-sandbox");
                 chromeOptions.addArguments("--disable-dev-shm-usage");
                 chromeOptions.addArguments("--disable-gpu");
@@ -59,7 +59,7 @@ public class Base {
 
             case "firefox":
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
-//                firefoxOptions.addArguments("--headless");
+                firefoxOptions.addArguments("--headless");
                 firefoxOptions.addArguments("--no-sandbox");
                 firefoxOptions.addArguments("--disable-dev-shm-usage");
                 firefoxOptions.addArguments("--width=1920");
@@ -68,7 +68,7 @@ public class Base {
 
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
-//                edgeOptions.addArguments("--headless");
+                edgeOptions.addArguments("--headless");
                 edgeOptions.addArguments("--no-sandbox");
                 edgeOptions.addArguments("--disable-dev-shm-usage");
                 edgeOptions.addArguments("--disable-gpu");
