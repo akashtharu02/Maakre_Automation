@@ -67,6 +67,7 @@ public class Base {
 //                return new FirefoxDriver(firefoxOptions);
 
             case "edge":
+                System.setProperty("webdriver.edge.driver", "C:\\Windows\\System32\\msedgedriver.exe");
                 EdgeOptions edgeOptions = new EdgeOptions();
                 edgeOptions.addArguments("--headless=new");
                 edgeOptions.addArguments("--no-sandbox");
@@ -74,10 +75,13 @@ public class Base {
                 edgeOptions.addArguments("--disable-gpu");
                 edgeOptions.addArguments("--window-size=1920,1080");
                 edgeOptions.addArguments("--remote-debugging-port=0");
-                edgeOptions.addArguments("--user-data-dir=C:\\ProgramData\\Jenkins\\.jenkins\\edge-profile-"
-                        + System.currentTimeMillis());
                 edgeOptions.addArguments("--disable-extensions");
                 edgeOptions.addArguments("--disable-software-rasterizer");
+                edgeOptions.addArguments("--no-first-run");
+                edgeOptions.addArguments("--no-default-browser-check");
+                edgeOptions.addArguments("--disable-background-networking");
+                edgeOptions.addArguments("--user-data-dir=C:\\ProgramData\\Jenkins\\.jenkins\\edge-profile-"
+                        + System.currentTimeMillis());
                 edgeOptions.setBinary("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe");
                 return new EdgeDriver(edgeOptions);
 
