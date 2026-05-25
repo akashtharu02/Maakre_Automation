@@ -63,7 +63,7 @@ public class Base {
                 firefoxOptions.addArguments("--disable-dev-shm-usage");
                 firefoxOptions.addArguments("--width=1920");
                 firefoxOptions.addArguments("--height=1080");
-                return new FirefoxDriver(firefoxOptions);git 
+                return new FirefoxDriver(firefoxOptions);
 
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
@@ -80,7 +80,7 @@ public class Base {
     }
 
     @AfterMethod
-    public void tearDown() throws InterruptedException {
+    public void tearDown() {
 
             driver.quit();
 
