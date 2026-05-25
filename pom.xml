@@ -13,7 +13,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
-        <suiteXmlFile>testngmy.xml</suiteXmlFile>
+        <suiteXmlFile>TestNg_Different_Browser.xml</suiteXmlFile>
     </properties>
 
     <dependencies>
